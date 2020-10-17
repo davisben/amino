@@ -5,7 +5,8 @@ id: staging
 label: Staging
 description: 'Configuration specific to staging environments.'
 folder: ../config/staging
-module: {  }
+module:
+  mailsystem: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }

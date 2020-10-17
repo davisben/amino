@@ -14,7 +14,8 @@
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6",
         "drupal/config_filter": "^1.7",
-        "drupal/config_split": "^1.6"
+        "drupal/config_split": "^1.6",
+        "drupal/mailsystem": "^4.3"
     },
     "require-dev": {
         "drupal/devel": "^4.0",

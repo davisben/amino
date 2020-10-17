@@ -34,6 +34,7 @@ install:
   - adminimal_admin_toolbar:adminimal_admin_toolbar
   - config_filter:config_filter
   - config_split:config_split
+  - mailsystem:mailsystem
 
 themes:
   - adminimal_theme

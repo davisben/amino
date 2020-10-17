@@ -5,7 +5,8 @@ id: production
 label: Production
 description: 'Configuration specific to production environments.'
 folder: ../config/prod
-module: {  }
+module:
+  mailsystem: 0
 theme: {  }
 blacklist: {  }
 graylist: {  }
