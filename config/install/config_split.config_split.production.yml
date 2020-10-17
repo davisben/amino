@@ -1,0 +1,14 @@
+langcode: en
+status: false
+dependencies: {  }
+id: production
+label: Production
+description: 'Configuration specific to production environments.'
+folder: ../config/prod
+module: {  }
+theme: {  }
+blacklist: {  }
+graylist: {  }
+graylist_dependents: true
+graylist_skip_equal: true
+weight: 0
