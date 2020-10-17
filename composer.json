@@ -15,5 +15,10 @@
         "drupal/adminimal_theme": "^1.6",
         "drupal/config_filter": "^1.7",
         "drupal/config_split": "^1.6"
+    },
+    "require-dev": {
+        "drupal/devel": "^4.0",
+        "drupal/stage_file_proxy": "^1.1",
+        "kint-php/kint": "^3.3"
     }
 }
