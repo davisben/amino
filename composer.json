@@ -1,0 +1,15 @@
+{
+    "name": "drupal/amino",
+    "description": "A modular distribution for building Drupal sites.",
+    "type": "drupal-profile",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ben Davis",
+            "email": "ben@davisben.com"
+        }
+    ],
+    "require": {
+        "drupal/adminimal_theme": "^1.6"
+    }
+}
