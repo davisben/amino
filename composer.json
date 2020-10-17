@@ -10,6 +10,8 @@
         }
     ],
     "require": {
+        "drupal/admin_toolbar": "^2.4",
+        "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/adminimal_theme": "^1.6"
     }
 }

@@ -29,5 +29,9 @@ install:
   - drupal:user
   - drupal:views
 
+  # Contrib
+  - admin_toolbar:admin_toolbar
+  - adminimal_admin_toolbar:adminimal_admin_toolbar
+
 themes:
   - adminimal_theme
