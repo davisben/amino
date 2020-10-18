@@ -1,0 +1,89 @@
+<?php
+
+/**
+ * @file
+ * Install, update & uninstall functions for the Amino installation profile.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function amino_install() {
+  $node_storage = \Drupal::entityTypeManager()->getStorage('node');
+  $alias_storage = \Drupal::entityTypeManager()->getStorage('path_alias');
+  $site_config = \Drupal::configFactory()->getEditable('system.site');
+  $created = \Drupal::time()->getCurrentTime();
+
+  // Create the home page.
+  $home = $node_storage->create([
+    'type' => 'system',
+    'title' => 'Home',
+    'uid' => 1,
+    'status' => TRUE,
+    'created' => $created,
+  ]);
+
+  $home->set('body', [
+    'value' => 'Welcome to Amino!',
+    'format' => 'plain_text'
+  ]);
+  $home->save();
+
+  $home_alias = $alias_storage->create([
+    'path' => '/node/' . $home->id(),
+    'alias' => '/home',
+  ]);
+  $home_alias->save();
+
+  $site_config->set('page.front', '/home')->save(TRUE);
+
+  // Create the 404 page.
+  $not_found = $node_storage->create([
+    'type' => 'system',
+    'title' => 'Page not found',
+    'uid' => 1,
+    'status' => TRUE,
+    'created' => $created,
+  ]);
+
+  $not_found->set('body', [
+    'value' => 'The page you\'re looking for can\'t be found.',
+    'format' => 'plain_text'
+  ]);
+  $not_found->save();
+
+  $not_found_alias = $alias_storage->create([
+    'path' => '/node/' . $not_found->id(),
+    'alias' => '/not-found',
+  ]);
+  $not_found_alias->save();
+
+  $site_config->set('page.404', '/not-found')->save(TRUE);
+
+  // Create the 403 page.
+  $access_denied = $node_storage->create([
+    'type' => 'system',
+    'title' => 'Access denied',
+    'uid' => 1,
+    'status' => TRUE,
+    'created' => $created,
+  ]);
+
+  $access_denied->set('body', [
+    'value' => 'You\'re not allowed to access this page.',
+    'format' => 'plain_text'
+  ]);
+  $access_denied->save();
+
+  $access_denied_alias = $alias_storage->create([
+    'path' => '/node/' . $access_denied->id(),
+    'alias' => '/denied',
+  ]);
+  $access_denied_alias->save();
+
+  $site_config->set('page.403', '/denied')->save(TRUE);
+}
