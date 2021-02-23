@@ -19,6 +19,8 @@ install:
   - drupal:dynamic_page_cache
   - drupal:image
   - drupal:link
+  - drupal:media
+  - drupal:media_library
   - drupal:node
   - drupal:options
   - drupal:page_cache
@@ -35,6 +37,7 @@ install:
   - config_filter:config_filter
   - config_split:config_split
   - mailsystem:mailsystem
+  - media_library_form_element:media_library_form_element
 
 themes:
   - adminimal_theme

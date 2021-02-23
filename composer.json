@@ -15,7 +15,8 @@
         "drupal/adminimal_theme": "^1.6",
         "drupal/config_filter": "^1.7",
         "drupal/config_split": "^1.6",
-        "drupal/mailsystem": "^4.3"
+        "drupal/mailsystem": "^4.3",
+        "drupal/media_library_form_element": "^2.0"
     },
     "require-dev": {
         "drupal/devel": "^4.0",
