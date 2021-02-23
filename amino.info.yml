@@ -33,6 +33,7 @@ install:
 
   # Contrib
   - admin_toolbar:admin_toolbar
+  - admin_toolbar:admin_toolbar_tools
   - config_filter:config_filter
   - config_split:config_split
   - gin_toolbar:gin_toolbar

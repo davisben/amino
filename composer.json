@@ -22,6 +22,7 @@
     },
     "require-dev": {
         "drupal/devel": "^4.0",
+        "drupal/devel_kint_extras": "^1.0",
         "drupal/stage_file_proxy": "^1.1",
         "kint-php/kint": "^3.3"
     }
