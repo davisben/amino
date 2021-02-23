@@ -11,10 +11,12 @@
     ],
     "require": {
         "drupal/admin_toolbar": "^2.4",
-        "drupal/adminimal_admin_toolbar": "^1.11",
-        "drupal/adminimal_theme": "^1.6",
+        "drupal/amino_theme": "^1.0",
+        "drupal/amino_tools": "^1.0",
         "drupal/config_filter": "^1.7",
         "drupal/config_split": "^1.6",
+        "drupal/gin": "^3.0@alpha",
+        "drupal/gin_toolbar": "^1.0@beta",
         "drupal/mailsystem": "^4.3",
         "drupal/media_library_form_element": "^2.0"
     },

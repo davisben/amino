@@ -33,11 +33,12 @@ install:
 
   # Contrib
   - admin_toolbar:admin_toolbar
-  - adminimal_admin_toolbar:adminimal_admin_toolbar
   - config_filter:config_filter
   - config_split:config_split
+  - gin_toolbar:gin_toolbar
   - mailsystem:mailsystem
   - media_library_form_element:media_library_form_element
 
 themes:
-  - adminimal_theme
+  - amino_theme
+  - gin
