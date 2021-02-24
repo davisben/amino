@@ -5,6 +5,8 @@ core_version_requirement: ^8 || ^9
 
 distribution:
   name: amino
+  install:
+    theme: amino_theme
 
 install:
   # Core
