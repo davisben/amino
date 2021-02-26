@@ -1,0 +1,72 @@
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - pathologic
+name: 'Full HTML'
+format: full_html
+weight: 0
+filters:
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: true
+    weight: 0
+    settings: {  }
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: false
+    weight: -10
+    settings:
+      allowed_html: '<em * id class> <strong * id class> <cite * id class> <blockquote * id class cite> <code * id class> <ul * id class type> <ol * id class start type> <li * id class> <dl * id class> <dt * id class> <dd * id class> <h2 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h3 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h4 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h5 * id class="text-align-left text-align-center text-align-right text-align-justify"> <h6 * id class="text-align-left text-align-center text-align-right text-align-justify"> <img src height width alt data-*> <hr * id class> <table * id class> <caption * id class> <tbody * id class> <thead * id class> <tfoot * id class> <th * id class> <td * id class> <tr * id class> <a id class href hreflang !href accesskey id rel target title name> <p class="text-align-left text-align-center text-align-right text-align-justify red-background red-underline-border red-quote-underline-border red-rectangle-border red-exclamation-mark side-block left-side-block right-side-block"> <pre * id class> <u> <s> <sub * id class> <sup * id class> <div * id class> <drupal-entity * data-*> <figure *> <picture *> <article *> <figcaption *>'
+      filter_html_help: true
+      filter_html_nofollow: false
+  filter_html_image_secure:
+    id: filter_html_image_secure
+    provider: filter
+    status: true
+    weight: 9
+    settings: {  }
+  filter_url:
+    id: filter_url
+    provider: filter
+    status: true
+    weight: 0
+    settings:
+      filter_url_length: 72
+  filter_autop:
+    id: filter_autop
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: true
+    weight: 0
+    settings: {  }
+  filter_htmlcorrector:
+    id: filter_htmlcorrector
+    provider: filter
+    status: true
+    weight: 10
+    settings: {  }
+  filter_pathologic:
+    id: filter_pathologic
+    provider: pathologic
+    status: true
+    weight: 50
+    settings:
+      settings_source: global
+      local_settings:
+        protocol_style: full
+        local_paths: ''
