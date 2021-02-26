@@ -1,0 +1,16 @@
+{
+    "name": "drupal/amino_page_builder",
+    "description": "Provides configuration for an improved content editing experience.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ben Davis",
+            "email": "ben@davisben.com"
+        }
+    ],
+    "require": {
+        "drupal/layout_paragraphs": "^1.0@beta",
+        "drupal/paragraphs": "^1.12"
+    }
+}

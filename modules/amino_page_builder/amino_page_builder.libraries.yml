@@ -1,0 +1,25 @@
+layout:
+  css:
+    layout:
+      css/layout.css: {}
+
+one-column:
+  css:
+    layout:
+      css/one-column.css: {}
+  dependencies:
+    - amino_page_builder/layout
+
+two-column:
+  css:
+    layout:
+      css/two-column.css: {}
+  dependencies:
+    - amino_page_builder/layout
+
+three-column:
+  css:
+    layout:
+      css/three-column.css: {}
+  dependencies:
+    - amino_page_builder/layout

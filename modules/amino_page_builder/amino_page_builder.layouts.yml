@@ -1,0 +1,44 @@
+amino_one_column:
+  label: 'One column'
+  category: 'Amino'
+  class: '\Drupal\amino_page_builder\LayoutBase'
+  template: templates/amino--one-column
+  library: amino_page_builder/one-column
+  default_region: content
+  icon_map:
+    - [content]
+  regions:
+    content:
+      label: Content
+
+amino_two_column:
+  label: 'Two column'
+  category: 'Amino'
+  class: '\Drupal\amino_page_builder\LayoutBase'
+  template: templates/amino--two-column
+  library: amino_page_builder/two-column
+  default_region: first
+  icon_map:
+    - [first, second]
+  regions:
+    first:
+      label: First
+    second:
+      label: Second
+
+amino_three_column:
+  label: 'Three column'
+  category: 'Amino'
+  class: '\Drupal\amino_page_builder\LayoutBase'
+  template: templates/amino--three-column
+  library: amino_page_builder/three-column
+  default_region: center
+  icon_map:
+    - [left, center, right]
+  regions:
+    left:
+      label: Left
+    center:
+      label: Center
+    right:
+      label: Right

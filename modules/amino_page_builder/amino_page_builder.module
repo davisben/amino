@@ -1,0 +1,29 @@
+<?php
+
+/**
+ * @file
+ * Amino Page Builder hooks and functions.
+ */
+
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
+function amino_page_builder_preprocess_layout(&$variables) {
+  if ($variables['layout']->getProvider() == 'amino_page_builder') {
+    $background = $variables['settings']['background'];
+
+    if ($background == 'color') {
+      $color = $variables['settings']['background_color'];
+
+      $variables['attributes']['style'] = "background-color: $color;";
+    }
+    elseif ($background == 'image') {
+      $file = File::load($variables['settings']['background_image']);
+      $image_url = $file->createFileUrl();
+
+      $variables['attributes']['style'] = "background-image: url('$image_url');";
+    }
+  }
+}

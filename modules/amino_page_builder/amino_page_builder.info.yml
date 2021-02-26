@@ -1,0 +1,10 @@
+name: Amino Page Builder
+description: 'Provides a Paragraphs based page builder.'
+type: module
+package: Amino
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - amino_editor:amino_editor
+  - paragraphs:paragraphs
+  - layout_paragraphs:layout_paragraphs

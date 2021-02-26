@@ -1,0 +1,19 @@
+.amino--three-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.amino--three-column > .amino-layout-region {
+    flex: 0 1 100%;
+  }
+
+  @media screen and (min-width: 40em) {
+    .amino--three-column > .region--left,
+    .amino--three-column > .region--right {
+      flex: 0 1 33%;
+    }
+
+    .amino--three-column > .region--center {
+      flex: 0 1 34%;
+    }
+  }

@@ -1,0 +1,15 @@
+.amino--two-column {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.amino--two-column > .amino-layout-region {
+    flex: 0 1 100%;
+  }
+
+  @media screen and (min-width: 40em) {
+    .amino--two-column > .region--first,
+    .amino--two-column > .region--second {
+      flex: 0 1 50%;
+    }
+  }
