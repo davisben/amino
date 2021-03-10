@@ -15,7 +15,6 @@
         "drupal/amino_tools": "^1.0",
         "drupal/config_filter": "^1.7",
         "drupal/config_split": "^1.6",
-        "drupal/core": "~9.0",
         "drupal/gin": "^3.0@alpha",
         "drupal/gin_toolbar": "^1.0@beta",
         "drupal/mailsystem": "^4.3",
