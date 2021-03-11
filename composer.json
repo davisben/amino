@@ -1,5 +1,5 @@
 {
-    "name": "drupal/amino",
+    "name": "davisben/amino",
     "description": "A modular distribution for building Drupal sites.",
     "type": "drupal-profile",
     "license": "GPL-2.0-or-later",
