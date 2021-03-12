@@ -1,0 +1,32 @@
+uuid: 6028e216-5ce4-425c-adcf-8caa25a0e821
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_content
+    - node.type.page
+  module:
+    - entity_reference_revisions
+id: node.page.field_content
+field_name: field_content
+entity_type: node
+bundle: page
+label: Content
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    negate: 1
+    target_bundles: null
+    target_bundles_drag_drop:
+      amino_layout:
+        weight: 3
+        enabled: false
+      rich_text:
+        weight: 4
+        enabled: false
+field_type: entity_reference_revisions

@@ -1,0 +1,14 @@
+uuid: 30737314-0019-4fc6-9450-5d5595d59df4
+langcode: en
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.amino_layout
+id: paragraph.amino_layout.default
+targetEntityType: paragraph
+bundle: amino_layout
+mode: default
+content: {  }
+hidden:
+  created: true
+  status: true

@@ -1,8 +1,10 @@
+uuid: b3855a69-e8b2-4a9b-8410-6f61688cafe5
 langcode: en
 status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
+    - field.field.node.page.field_content
     - node.type.page
   module:
     - user
@@ -16,4 +18,5 @@ content:
     settings: {  }
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_content: true

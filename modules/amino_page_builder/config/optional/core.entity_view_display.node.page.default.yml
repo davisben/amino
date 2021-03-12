@@ -1,18 +1,30 @@
+uuid: 290b76d6-256a-4f3c-bccd-10da003625e7
 langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.page.field_content
     - node.type.page
   module:
+    - layout_paragraphs
     - user
 id: node.page.default
 targetEntityType: node
 bundle: page
 mode: default
 content:
-  links:
-    weight: 100
-    settings: {  }
+  field_content:
+    type: layout_paragraphs
+    weight: 0
+    label: hidden
+    settings:
+      view_mode: default
+      link: ''
     third_party_settings: {  }
     region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }

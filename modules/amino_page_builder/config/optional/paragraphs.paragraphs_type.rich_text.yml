@@ -1,0 +1,10 @@
+uuid: 587f8908-0477-4573-ba0d-1e8d92f3c1c8
+langcode: en
+status: true
+dependencies: {  }
+id: rich_text
+label: 'Rich Text'
+icon_uuid: null
+icon_default: null
+description: 'A rich text editor.'
+behavior_plugins: {  }
