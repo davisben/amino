@@ -10,6 +10,7 @@ distribution:
 
 install:
   # Core
+  - drupal:automated_cron
   - drupal:big_pipe
   - drupal:block
   - drupal:block_content
@@ -24,11 +25,14 @@ install:
   - drupal:link
   - drupal:media
   - drupal:media_library
+  - drupal:menu_link_content
   - drupal:node
   - drupal:options
   - drupal:page_cache
   - drupal:path
   - drupal:path_alias
+  - drupal:rdf
+  - drupal:responsive_image
   - drupal:telephone
   - drupal:toolbar
   - drupal:user
