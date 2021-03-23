@@ -1,0 +1,18 @@
+<?php
+
+/**
+ * @file
+ * Theme functions for the Amino Install theme.
+ */
+
+/**
+ * Implements template_preprocess_install_page().
+ *
+ * @param array $variables
+ */
+function amino_install_preprocess_install_page(&$variables) {
+  $profile_path = drupal_get_path('profile', 'amino');
+  $variables['logo'] = base_path() . $profile_path . '/logo.png';
+
+  $variables['#attached']['library'][] = 'amino_install/install_page';
+}

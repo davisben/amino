@@ -1,0 +1,6 @@
+name: Amino Install
+type: theme
+description: A simple base theme that integrates helpful tools.
+core_version_requirement: ^8 || ^9
+base theme: false
+hidden: true
