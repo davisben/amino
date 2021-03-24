@@ -35,13 +35,13 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
         'color' => $this->t('Color'),
         'image' => $this->t('Image'),
       ],
-      '#default_value' => $configuration['background'],
+      '#default_value' => $configuration['background'] ?? NULL,
     ];
 
     $form['background_color'] = [
       '#type' => 'color',
       '#title' => $this->t('Background Color'),
-      '#default_value' => $configuration['background_color'],
+      '#default_value' => $configuration['background_color'] ?? NULL,
       '#states' => [
         'visible' => [
           ':input[name="field_content[entity_form][0][layout_plugin_form][background]"]' => ['value' => 'color'],
@@ -53,7 +53,7 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
       '#type' => 'media_library',
       '#title' => $this->t('Background Image'),
       '#allowed_bundles' => ['image'],
-      '#default_value' => $configuration['background_image'],
+      '#default_value' => $configuration['background_image'] ?? NULL,
       '#states' => [
         'visible' => [
           ':input[name="field_content[entity_form][0][layout_plugin_form][background]"]' => ['value' => 'image'],
@@ -64,13 +64,13 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
     $form['full_width'] = [
       '#type' => 'checkbox',
       '#title' => $this->t('Full width'),
-      '#default_value' => $configuration['full_width'],
+      '#default_value' => $configuration['full_width'] ?? NULL,
     ];
 
     $form['additional_classes'] = [
       '#type' => 'textfield',
       '#title' => $this->t('Additional classes'),
-      '#default_value' => $configuration['additional_classes'],
+      '#default_value' => $configuration['additional_classes'] ?? NULL,
     ];
 
     return $form;
