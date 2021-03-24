@@ -13,6 +13,6 @@ behavior_plugins:
   layout_paragraphs:
     enabled: true
     available_layouts:
-      amino_one_column: 'One column'
-      amino_three_column: 'Three column'
-      amino_two_column: 'Two column'
+      amino_1column: 'One column'
+      amino_2column: 'Two column'
+      amino_3column: 'Three column'

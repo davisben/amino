@@ -1,0 +1,15 @@
+{
+    "name": "drupal/amino_security",
+    "description": "Provides cofiguration for enhanced security.",
+    "type": "drupal-module",
+    "license": "GPL-2.0-or-later",
+    "authors": [
+        {
+            "name": "Ben Davis",
+            "email": "ben@davisben.com"
+        }
+    ],
+    "require": {
+        "drupal/password_policy": "^3.0@beta"
+    }
+}

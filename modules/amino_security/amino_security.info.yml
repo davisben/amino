@@ -1,0 +1,8 @@
+name: Amino Security
+description: 'Provides cofiguration for enhanced security.'
+type: module
+package: Amino
+core_version_requirement: ^8 || ^9
+
+dependencies:
+  - password_policy:password_policy

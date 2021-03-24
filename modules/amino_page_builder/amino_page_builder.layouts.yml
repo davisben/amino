@@ -1,4 +1,4 @@
-amino_one_column:
+amino_1column:
   label: 'One column'
   category: 'Amino'
   class: '\Drupal\amino_page_builder\LayoutBase'
@@ -11,7 +11,7 @@ amino_one_column:
     content:
       label: Content
 
-amino_two_column:
+amino_2column:
   label: 'Two column'
   category: 'Amino'
   class: '\Drupal\amino_page_builder\LayoutBase'
@@ -26,7 +26,7 @@ amino_two_column:
     second:
       label: Second
 
-amino_three_column:
+amino_3column:
   label: 'Three column'
   category: 'Amino'
   class: '\Drupal\amino_page_builder\LayoutBase'
