@@ -12,4 +12,5 @@ dependencies:
   - password_policy:password_policy_consecutive
   - password_policy:password_policy_history
   - password_policy:password_policy_username
+  - seckit:seckit
   - username_enumeration_prevention:username_enumeration_prevention

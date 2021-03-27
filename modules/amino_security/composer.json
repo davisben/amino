@@ -11,6 +11,7 @@
     ],
     "require": {
         "drupal/password_policy": "^3.0@beta",
+        "drupal/seckit": "^2.0",
         "drupal/username_enumeration_prevention": "^1.2"
     }
 }
