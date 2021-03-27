@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.storage.node.field_content
-    - node.type.page
+    - field.storage.node.amino_content
+    - node.type.amino_page
   module:
     - entity_reference_revisions
-id: node.page.field_content
-field_name: field_content
+id: node.amino_page.amino_content
+field_name: amino_content
 entity_type: node
-bundle: page
+bundle: amino_page
 label: Content
 description: ''
 required: false
@@ -25,7 +25,7 @@ settings:
       amino_layout:
         weight: 3
         enabled: false
-      rich_text:
+      amino_rich_text:
         weight: 4
         enabled: false
 field_type: entity_reference_revisions

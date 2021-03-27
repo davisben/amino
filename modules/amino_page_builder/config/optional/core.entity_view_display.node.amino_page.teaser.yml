@@ -3,13 +3,13 @@ status: true
 dependencies:
   config:
     - core.entity_view_mode.node.teaser
-    - field.field.node.page.field_content
-    - node.type.page
+    - field.field.node.amino_page.amino_content
+    - node.type.amino_page
   module:
     - user
-id: node.page.teaser
+id: node.amino_page.teaser
 targetEntityType: node
-bundle: page
+bundle: amino_page
 mode: teaser
 content:
   links:
@@ -18,4 +18,4 @@ content:
     third_party_settings: {  }
     region: content
 hidden:
-  field_content: true
+  amino_content: true

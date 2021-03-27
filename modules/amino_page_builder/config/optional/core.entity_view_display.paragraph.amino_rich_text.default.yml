@@ -2,13 +2,13 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.paragraph.rich_text.field_rich_text
-    - paragraphs.paragraphs_type.rich_text
+    - field.field.paragraph.amino_rich_text.amino_rich_text_field
+    - paragraphs.paragraphs_type.amino_rich_text
   module:
     - text
-id: paragraph.rich_text.default
+id: paragraph.amino_rich_text.default
 targetEntityType: paragraph
-bundle: rich_text
+bundle: amino_rich_text
 mode: default
 content:
   field_rich_text:

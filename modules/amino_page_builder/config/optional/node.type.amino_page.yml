@@ -2,7 +2,7 @@ langcode: en
 status: true
 dependencies: {  }
 name: Page
-type: page
+type: amino_page
 description: 'Pages are used for generic content.'
 help: ''
 new_revision: true

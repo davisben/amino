@@ -2,14 +2,14 @@ langcode: en
 status: true
 dependencies:
   config:
-    - field.field.node.page.field_content
-    - node.type.page
+    - field.field.node.amino_page.amino_content
+    - node.type.amino_page
   module:
     - layout_paragraphs
     - path
-id: node.page.default
+id: node.amino_page.default
 targetEntityType: node
-bundle: page
+bundle: amino_page
 mode: default
 content:
   created:
@@ -18,7 +18,7 @@ content:
     region: content
     settings: {  }
     third_party_settings: {  }
-  field_content:
+  amino_content:
     type: layout_paragraphs
     weight: 1
     settings:
