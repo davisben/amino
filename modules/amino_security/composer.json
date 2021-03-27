@@ -10,6 +10,7 @@
         }
     ],
     "require": {
-        "drupal/password_policy": "^3.0@beta"
+        "drupal/password_policy": "^3.0@beta",
+        "drupal/username_enumeration_prevention": "^1.2"
     }
 }
