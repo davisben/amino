@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.amino_expandable.amino_expandable_heading
+    - field.field.paragraph.amino_expandable.amino_rich_text_field
+    - paragraphs.paragraphs_type.amino_expandable
+  module:
+    - text
+id: paragraph.amino_expandable.default
+targetEntityType: paragraph
+bundle: amino_expandable
+mode: default
+content:
+  amino_expandable_heading:
+    weight: 0
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  amino_rich_text_field:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+hidden: {  }

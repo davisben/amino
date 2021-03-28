@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.amino_rich_text_field
+    - paragraphs.paragraphs_type.amino_expandable
+  module:
+    - text
+id: paragraph.amino_expandable.amino_rich_text_field
+field_name: amino_rich_text_field
+entity_type: paragraph
+bundle: amino_expandable
+label: Content
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

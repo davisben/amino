@@ -1,0 +1,9 @@
+langcode: en
+status: true
+dependencies: {  }
+id: amino_expandable
+label: 'Expandable content'
+icon_uuid: null
+icon_default: null
+description: 'Content that can be expanded by clicking on a heading.'
+behavior_plugins: {  }
