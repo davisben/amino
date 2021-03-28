@@ -11,6 +11,7 @@
     ],
     "require": {
         "drupal/diff": "^1.0",
+        "drupal/editoria11y": "^1.0",
         "drupal/pathologic": "^1.0@alpha"
     }
 }

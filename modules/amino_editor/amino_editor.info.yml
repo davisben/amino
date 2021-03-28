@@ -9,4 +9,5 @@ dependencies:
   - drupal:ckeditor
   - drupal:content_moderation
   - diff:diff
+  - editoria11y:editoria11y
   - pathologic:pathologic
