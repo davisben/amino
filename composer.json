@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "drupal/admin_toolbar": "^2.4",
+        "drupal/admin_toolbar": "^3.0",
         "drupal/amino_theme": "^1.0",
         "drupal/config_filter": "^1.7",
         "drupal/config_split": "^1.6",
