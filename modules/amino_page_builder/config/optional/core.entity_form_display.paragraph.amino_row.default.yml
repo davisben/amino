@@ -2,10 +2,10 @@ langcode: en
 status: true
 dependencies:
   config:
-    - paragraphs.paragraphs_type.amino_layout
-id: paragraph.amino_layout.default
+    - paragraphs.paragraphs_type.amino_row
+id: paragraph.amino_row.default
 targetEntityType: paragraph
-bundle: amino_layout
+bundle: amino_row
 mode: default
 content: {  }
 hidden:

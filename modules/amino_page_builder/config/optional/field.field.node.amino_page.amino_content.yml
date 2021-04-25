@@ -22,7 +22,7 @@ settings:
     negate: 1
     target_bundles: null
     target_bundles_drag_drop:
-      amino_layout:
+      amino_row:
         weight: 3
         enabled: false
       amino_rich_text:
