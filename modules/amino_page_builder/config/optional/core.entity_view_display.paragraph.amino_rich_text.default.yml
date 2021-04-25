@@ -11,11 +11,11 @@ targetEntityType: paragraph
 bundle: amino_rich_text
 mode: default
 content:
-  field_rich_text:
+  amino_rich_text_field:
+    type: text_default
     weight: 0
+    region: content
     label: hidden
     settings: {  }
     third_party_settings: {  }
-    type: text_default
-    region: content
 hidden: {  }
