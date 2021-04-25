@@ -44,7 +44,7 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
       '#default_value' => $configuration['background_color'] ?? NULL,
       '#states' => [
         'visible' => [
-          ':input[name="field_content[entity_form][0][layout_plugin_form][background]"]' => ['value' => 'color'],
+          ':input[name="amino_content[entity_form][0][layout_plugin_form][background]"]' => ['value' => 'color'],
         ],
       ],
     ];
@@ -56,7 +56,7 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
       '#default_value' => $configuration['background_image'] ?? NULL,
       '#states' => [
         'visible' => [
-          ':input[name="field_content[entity_form][0][layout_plugin_form][background]"]' => ['value' => 'image'],
+          ':input[name="amino_content[entity_form][0][layout_plugin_form][background]"]' => ['value' => 'image'],
         ],
       ],
     ];
