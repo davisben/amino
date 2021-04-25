@@ -21,9 +21,9 @@ function amino_page_builder_preprocess_layout(&$variables) {
  */
 function amino_page_builder_theme($existing, $type, $theme, $path) {
   return [
-   'paragraph__amino_expandable_content' => [
-      'template' => 'paragraphs/paragraph--amino-expandable-content',
-      'base hook' => 'paragraph'
+    'paragraph__amino_expandable' => [
+      'template' => 'paragraphs/paragraph--amino-expandable',
+      'base hook' => 'paragraph',
     ],
   ];
 }

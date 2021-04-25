@@ -50,7 +50,7 @@
   <div{{ attributes.addClass(classes) }}>
     {% block content %}
       <details>
-        <summary>{{ content.field_expandable_heading|render|striptags }}</summary>
+        <summary>{{ content.amino_expandable_heading|render|striptags }}</summary>
         {{ content.amino_rich_text_field }}
       </details>
     {% endblock %}
