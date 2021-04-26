@@ -1,0 +1,29 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.amino_heading.amino_heading_tag
+    - field.field.paragraph.amino_heading.amino_heading_text
+    - paragraphs.paragraphs_type.amino_heading
+id: paragraph.amino_heading.default
+targetEntityType: paragraph
+bundle: amino_heading
+mode: default
+content:
+  amino_heading_tag:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  amino_heading_text:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

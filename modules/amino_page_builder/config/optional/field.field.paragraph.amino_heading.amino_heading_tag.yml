@@ -1,0 +1,20 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.amino_heading_tag
+    - paragraphs.paragraphs_type.amino_heading
+  module:
+    - options
+id: paragraph.amino_heading.amino_heading_tag
+field_name: amino_heading_tag
+entity_type: paragraph
+bundle: amino_heading
+label: Tag
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string
