@@ -1,0 +1,23 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.amino_image.amino_image
+    - field.field.paragraph.amino_image.amino_image_style
+    - paragraphs.paragraphs_type.amino_image
+id: paragraph.amino_image.default
+targetEntityType: paragraph
+bundle: amino_image
+mode: default
+content:
+  amino_image:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      link: true
+      view_mode: default
+    third_party_settings: {  }
+hidden:
+  amino_image_style: true

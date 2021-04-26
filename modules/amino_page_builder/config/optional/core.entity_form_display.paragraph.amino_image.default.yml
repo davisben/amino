@@ -1,0 +1,30 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.amino_image.amino_image
+    - field.field.paragraph.amino_image.amino_image_style
+    - paragraphs.paragraphs_type.amino_image
+  module:
+    - media_library
+id: paragraph.amino_image.default
+targetEntityType: paragraph
+bundle: amino_image
+mode: default
+content:
+  amino_image:
+    type: media_library_widget
+    weight: 0
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  amino_image_style:
+    type: options_select
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true
