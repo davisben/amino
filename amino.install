@@ -29,7 +29,7 @@ function amino_install() {
 
   $home->set('body', [
     'value' => 'Welcome to Amino!',
-    'format' => 'plain_text'
+    'format' => 'plain_text',
   ]);
   $home->save();
 
@@ -52,7 +52,7 @@ function amino_install() {
 
   $not_found->set('body', [
     'value' => 'The page you\'re looking for can\'t be found.',
-    'format' => 'plain_text'
+    'format' => 'plain_text',
   ]);
   $not_found->save();
 
@@ -75,7 +75,7 @@ function amino_install() {
 
   $access_denied->set('body', [
     'value' => 'You\'re not allowed to access this page.',
-    'format' => 'plain_text'
+    'format' => 'plain_text',
   ]);
   $access_denied->save();
 
