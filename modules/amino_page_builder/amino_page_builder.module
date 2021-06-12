@@ -5,8 +5,19 @@
  * Amino Page Builder hooks and functions.
  */
 
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\amino_page_builder\LayoutParagraphsAlter;
 use Drupal\amino_page_builder\LayoutPreprocess;
 use Drupal\amino_page_builder\ParagraphPreprocess;
+
+/**
+ * Implements hook_field_widget_WIDGET_TYPE_form_alter().
+ */
+function amino_page_builder_field_widget_layout_paragraphs_form_alter(&$element, FormStateInterface $form_state, $context) {
+  \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(LayoutParagraphsAlter::class)
+    ->alterWidget($element);
+}
 
 /**
  * Implements hook_preprocess_HOOK().
@@ -34,7 +45,6 @@ function amino_page_builder_preprocess_paragraph__amino_image(&$variables) {
     ->getInstanceFromDefinition(ParagraphPreprocess::class)
     ->preprocessAminoImage($variables);
 }
-
 
 /**
  * Implements hook_theme().
