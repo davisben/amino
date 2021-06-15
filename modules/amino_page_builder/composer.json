@@ -10,7 +10,7 @@
         }
     ],
     "require": {
-        "drupal/layout_paragraphs": "^1.0@beta",
+        "drupal/layout_paragraphs": "^1.0 || ^2.0",
         "drupal/paragraphs": "^1.12"
     }
 }
