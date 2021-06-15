@@ -3,12 +3,12 @@
 namespace Drupal\amino_page_builder;
 
 /**
- * Layout paragraphs widget alter.
+ * Layout Paragraphs widget alter.
  */
 class LayoutParagraphsAlter {
 
   /**
-   * Alter the layout paragraphs widget.
+   * Alter the Layout Paragraphs widget.
    *
    * @param array $element
    *   The widget to alter.
