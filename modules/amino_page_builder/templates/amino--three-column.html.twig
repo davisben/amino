@@ -25,6 +25,12 @@
 
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
+    {% if settings.heading %}
+      <div class="region--heading">
+        <h2 class="row-heading">{{ settings.heading }}</h2>
+      </div>
+    {% endif %}
+
     {% if content.left %}
       <div {{ region_attributes.left.addClass('amino-layout-region', 'region--left') }}>
         {{ content.left }}

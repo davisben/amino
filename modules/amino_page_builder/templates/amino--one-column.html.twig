@@ -25,6 +25,12 @@
 
 {% if content %}
   <div{{ attributes.addClass(classes) }}>
+    {% if settings.heading %}
+      <div class="region--heading">
+        <h2 class="row-heading">{{ settings.heading }}</h2>
+      </div>
+    {% endif %}
+
     <div {{ region_attributes.content.addClass('region--content') }}>
       {{ content.content }}
     </div>

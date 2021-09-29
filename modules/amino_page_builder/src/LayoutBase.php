@@ -16,6 +16,7 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
    */
   public function defaultConfiguration() {
     return parent::defaultConfiguration() + [
+      'heading' => '',
       'full_width' => 0,
       'additional_classes' => '',
     ];
@@ -26,6 +27,12 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $configuration = $this->getConfiguration();
+
+    $form['heading'] = [
+      '#type' => 'textfield',
+      '#title' => $this->t('Heading'),
+      '#default_value' => $configuration['heading'] ?? NULL,
+    ];
 
     $form['background'] = [
       '#type' => 'select',
@@ -81,11 +88,12 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
    */
   public function submitConfigurationForm(array &$form, FormStateInterface $form_state) {
     $config_keys = [
-      'full_width',
-      'additional_classes',
+      'heading',
       'background',
       'background_color',
       'background_image',
+      'full_width',
+      'additional_classes',
     ];
 
     foreach ($config_keys as $key) {

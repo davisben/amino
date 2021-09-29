@@ -3,6 +3,10 @@
   flex-wrap: wrap;
 }
 
+.amino--two-column > .region--heading {
+  flex: 0 1 100%;
+}
+
 .amino--two-column > .amino-layout-region {
   flex: 0 1 100%;
 }
