@@ -49,12 +49,22 @@ class LayoutPreprocess implements ContainerInjectionInterface {
    */
   public function preprocessLayout(array &$variables) {
     if ($variables['layout']->getProvider() == 'amino_page_builder') {
+      $regions = $variables['layout']->getRegions();
+
+      foreach (array_keys($regions) as $region) {
+        $key = 'region_width_' . $region;
+        if (isset($variables['settings'][$key])) {
+          $width = $variables['settings'][$key];
+          $variables['region_attributes'][$region]->setAttribute('style', "flex-basis: $width%;");
+        }
+      }
+
       $background = $variables['settings']['background'];
 
       if ($background == 'color') {
         $color = $variables['settings']['background_color'];
 
-        $variables['attributes']['style'] = "background-color: $color;";
+        $variables['attributes']['style'][] = "background-color: $color;";
       }
       elseif ($background == 'image') {
         $file_storage = $this->entityTypeManager->getStorage('file');
@@ -62,7 +72,7 @@ class LayoutPreprocess implements ContainerInjectionInterface {
         $file = $file_storage->load($variables['settings']['background_image']);
         $image_url = $file->createFileUrl();
 
-        $variables['attributes']['style'] = "background-image: url('$image_url');";
+        $variables['attributes']['style'][] = "background-image: url('$image_url');";
       }
     }
   }

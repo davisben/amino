@@ -14,6 +14,16 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
   /**
    * {@inheritdoc}
    */
+  public function __construct(array $configuration, $plugin_id, $plugin_definition) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+
+    $regions = $this->getPluginDefinition()->getRegions();
+    $this->regions = array_keys($regions);
+  }
+
+  /**
+   * {@inheritdoc}
+   */
   public function defaultConfiguration() {
     return parent::defaultConfiguration() + [
       'heading' => '',
@@ -27,6 +37,21 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
    */
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $configuration = $this->getConfiguration();
+
+    //$form['regions'] = [
+      //'#type' => 'container',
+      //'#title' => $this->t('Width'),
+      //'#default_value' => $configuration[$key] ?? NULL,
+    //];
+
+    foreach ($this->regions as $region) {
+      $key = 'region_width_' . $region;
+      $form[$key] = [
+        '#type' => 'textfield',
+        '#title' => $this->t('Region width: @region', ['@region' => $region]),
+        '#default_value' => $configuration[$key] ?? NULL,
+      ];
+    }
 
     $form['heading'] = [
       '#type' => 'textfield',
@@ -95,6 +120,10 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
       'full_width',
       'additional_classes',
     ];
+
+    foreach ($this->regions as $region) {
+      $config_keys[] = 'region_width_' . $region;
+    }
 
     foreach ($config_keys as $key) {
       $value = $form_state->getValue($key);
