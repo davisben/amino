@@ -1,0 +1,21 @@
+#layout-paragraphs-layout-options .region-width-wrapper .details-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#layout-paragraphs-layout-options .region-width-wrapper .details-wrapper > #region-slider {
+  flex: 0 0 100%;
+  margin-bottom: 1rem;
+}
+
+#layout-paragraphs-layout-options .region-width-wrapper .details-wrapper > .form-item {
+  margin-right: 1rem;
+}
+
+#layout-paragraphs-layout-options .region-width-wrapper .details-wrapper > .form-item label {
+  font-weight: normal;
+}
+
+#layout-paragraphs-layout-options .region-width-wrapper .details-wrapper > .region-width-description {
+  flex: 0 0 100%;
+}

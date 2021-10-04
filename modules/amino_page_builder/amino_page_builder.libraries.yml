@@ -1,3 +1,19 @@
+nouislider:
+  css:
+    component:
+      /libraries/nouislider/dist/nouislider.min.css: { minified: true }
+  js:
+    /libraries/nouislider/dist/nouislider.min.js: { minified: true }
+
+layout.settings:
+  js:
+    js/layout-settings.js: {}
+  css:
+    layout:
+      css/layout-settings.css: {}
+  dependencies:
+    - amino_page_builder/nouislider
+
 layout:
   css:
     layout:

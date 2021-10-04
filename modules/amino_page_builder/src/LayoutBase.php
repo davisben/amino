@@ -38,18 +38,42 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
   public function buildConfigurationForm(array $form, FormStateInterface $form_state) {
     $configuration = $this->getConfiguration();
 
-    //$form['regions'] = [
-      //'#type' => 'container',
-      //'#title' => $this->t('Width'),
-      //'#default_value' => $configuration[$key] ?? NULL,
-    //];
+    if (count($this->regions) > 1) {
+      $form['#attached']['library'][] = 'amino_page_builder/layout.settings';
 
-    foreach ($this->regions as $region) {
-      $key = 'region_width_' . $region;
-      $form[$key] = [
-        '#type' => 'textfield',
-        '#title' => $this->t('Region width: @region', ['@region' => $region]),
-        '#default_value' => $configuration[$key] ?? NULL,
+      $form['regions'] = [
+        '#type' => 'details',
+        '#title' => $this->t('Column widths'),
+        '#attributes' => [
+          'class' => [
+            'region-width-wrapper',
+          ],
+        ],
+      ];
+
+      $form['regions']['slider'] = [
+        '#type' => 'markup',
+        '#markup' => '<div id="region-slider"></div>',
+      ];
+
+      foreach ($this->regions as $region) {
+        $key = 'region_width_' . $region;
+        $form['regions'][$key] = [
+          '#type' => 'textfield',
+          '#title' => ucfirst($region),
+          '#size' => 5,
+          '#default_value' => $configuration[$key] ?? NULL,
+        ];
+      }
+
+      $form['regions']['description'] = [
+        '#type' => 'markup',
+        '#markup' => '<p class="region-width-description">' . $this->t('Column widths, in percent.') . '</p>',
+        '#attributes' => [
+          'class' => [
+            'region-width-description',
+          ],
+        ],
       ];
     }
 
