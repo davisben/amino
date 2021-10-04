@@ -7,17 +7,23 @@
   flex: 0 1 100%;
 }
 
-.amino--three-column > .amino-layout-region {
+.amino--three-column .row-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 100%;
+}
+
+.amino--three-column .row-content > .amino-layout-region {
   flex: 0 1 100%;
 }
 
 @media screen and (min-width: 40em) {
-  .amino--three-column > .region--left,
-  .amino--three-column > .region--right {
+  .amino--three-column .row-content > .region--left,
+  .amino--three-column .row-content > .region--right {
     flex: 0 1 33%;
   }
 
-  .amino--three-column > .region--center {
+  .amino--three-column .row-content > .region--center {
     flex: 0 1 34%;
   }
 }

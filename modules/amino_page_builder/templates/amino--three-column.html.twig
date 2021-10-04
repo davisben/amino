@@ -31,22 +31,24 @@
       </div>
     {% endif %}
 
-    {% if content.left %}
-      <div {{ region_attributes.left.addClass('amino-layout-region', 'region--left') }}>
-        {{ content.left }}
-      </div>
-    {% endif %}
+    <div class="row-content">
+      {% if content.left %}
+        <div {{ region_attributes.left.addClass('amino-layout-region', 'region--left') }}>
+          {{ content.left }}
+        </div>
+      {% endif %}
 
-    {% if content.center %}
-      <div {{ region_attributes.center.addClass('amino-layout-region', 'region--center') }}>
-        {{ content.center }}
-      </div>
-    {% endif %}
+      {% if content.center %}
+        <div {{ region_attributes.center.addClass('amino-layout-region', 'region--center') }}>
+          {{ content.center }}
+        </div>
+      {% endif %}
 
-    {% if content.right %}
-      <div {{ region_attributes.right.addClass('amino-layout-region', 'region--right') }}>
-        {{ content.right }}
-      </div>
-    {% endif %}
+      {% if content.right %}
+        <div {{ region_attributes.right.addClass('amino-layout-region', 'region--right') }}>
+          {{ content.right }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 {% endif %}

@@ -7,13 +7,19 @@
   flex: 0 1 100%;
 }
 
-.amino--two-column > .amino-layout-region {
+.amino--two-column .row-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 100%;
+}
+
+.amino--two-column .row-content > .amino-layout-region {
   flex: 0 1 100%;
 }
 
 @media screen and (min-width: 40em) {
-  .amino--two-column > .region--first,
-  .amino--two-column > .region--second {
+  .amino--two-column .row-content > .region--first,
+  .amino--two-column .row-content > .region--second {
     flex: 0 1 50%;
   }
 }

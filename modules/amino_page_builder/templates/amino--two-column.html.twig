@@ -31,16 +31,18 @@
       </div>
     {% endif %}
 
-    {% if content.first %}
-      <div {{ region_attributes.first.addClass('amino-layout-region', 'region--first') }}>
-        {{ content.first }}
-      </div>
-    {% endif %}
+    <div class="row-content">
+      {% if content.first %}
+        <div {{ region_attributes.first.addClass('amino-layout-region', 'region--first') }}>
+          {{ content.first }}
+        </div>
+      {% endif %}
 
-    {% if content.second %}
-      <div {{ region_attributes.second.addClass('amino-layout-region', 'region--second') }}>
-        {{ content.second }}
-      </div>
-    {% endif %}
+      {% if content.second %}
+        <div {{ region_attributes.second.addClass('amino-layout-region', 'region--second') }}>
+          {{ content.second }}
+        </div>
+      {% endif %}
+    </div>
   </div>
 {% endif %}
