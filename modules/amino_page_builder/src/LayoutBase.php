@@ -62,7 +62,7 @@ class LayoutBase extends LayoutDefault implements PluginFormInterface {
           '#type' => 'textfield',
           '#title' => ucfirst($region),
           '#size' => 5,
-          '#default_value' => $configuration[$key] ?? NULL,
+          '#default_value' => $configuration['regions'][$key] ?? NULL,
         ];
       }
 

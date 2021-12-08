@@ -49,13 +49,15 @@ class LayoutPreprocess implements ContainerInjectionInterface {
    */
   public function preprocessLayout(array &$variables) {
     if ($variables['layout']->getProvider() == 'amino_page_builder') {
-      $regions = $variables['layout']->getRegions();
+      if (isset($variables['settings']['regions'])) {
+        $regions = $variables['layout']->getRegions();
 
-      foreach (array_keys($regions) as $region) {
-        $key = 'region_width_' . $region;
-        if (isset($variables['settings'][$key])) {
-          $width = $variables['settings'][$key];
-          $variables['region_attributes'][$region]->setAttribute('style', "flex-basis: $width%;");
+        foreach (array_keys($regions) as $region) {
+          $key = 'region_width_' . $region;
+          if (isset($variables['settings']['regions'][$key])) {
+            $width = $variables['settings']['regions'][$key];
+            $variables['region_attributes'][$region]->setAttribute('style', "flex-basis: $width%;");
+          }
         }
       }
 
