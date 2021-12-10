@@ -69,9 +69,15 @@ class LayoutPreprocess implements ContainerInjectionInterface {
         $variables['attributes']['style'][] = "background-color: $color;";
       }
       elseif ($background == 'image') {
+        $media_storage = $this->entityTypeManager->getStorage('media');
         $file_storage = $this->entityTypeManager->getStorage('file');
+
+        /** @var \Drupal\media\MediaInterface $media */
+        $media = $media_storage->load($variables['settings']['background_image']);
+        $fid = $media->getSource()->getSourceFieldValue($media);
+
         /** @var \Drupal\file\FileInterface $file */
-        $file = $file_storage->load($variables['settings']['background_image']);
+        $file = $file_storage->load($fid);
         $image_url = $file->createFileUrl();
 
         $variables['attributes']['style'][] = "background-image: url('$image_url');";
