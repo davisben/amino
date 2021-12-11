@@ -1,3 +1,18 @@
 .amino--one-column {
-  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.amino--one-column > .region--heading {
+  flex: 0 1 100%;
+}
+
+.amino--one-column .row-content {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 0 1 100%;
+}
+
+.amino--one-column .row-content > .amino-layout-region {
+  flex: 0 1 100%;
 }
